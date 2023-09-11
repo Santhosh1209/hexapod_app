@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'signup.dart';
+import 'login_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -71,28 +72,26 @@ class StartPage extends StatelessWidget {
               children: <Widget>[
                 ElevatedButton(
                   onPressed: () {
-                    // Handle user button click
-                    // You can navigate to the user page here
                       Navigator.push(context,
                           MaterialPageRoute(builder: (context) => SignUpPage()));
-                  },
-                  style: ElevatedButton.styleFrom(
-                    primary: Color(0xFF6535ee), // Button color
-                    minimumSize: Size(200, 50), // Set button size
-                  ),
-                  child: Text('User'),
-                ),
-                SizedBox(height: 10.0), // Spacing between buttons
-                ElevatedButton(
-                  onPressed: () {
-                    // Handle admin button click
-                    // You can navigate to the admin page here
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Color(0xFF6535ee), // Button color
                     minimumSize: Size(200, 50), // Set button size
                   ),
-                  child: Text('Admin'),
+                  child: Text('Sign Up'),
+                ),
+                SizedBox(height: 10.0), // Spacing between buttons
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => LoginPage()));
+                  },
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Color(0xFF6535ee), // Button color
+                    minimumSize: Size(200, 50), // Set button size
+                  ),
+                  child: Text('Log In'),
                 ),
               ],
             ),

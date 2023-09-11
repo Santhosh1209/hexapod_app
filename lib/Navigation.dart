@@ -29,7 +29,7 @@ class _NavigationStateState extends State<NavigationState> {
 
   // create a list of pages
   final List<Widget> _pages = [
-    HomePage(),
+    MyAccountPage(),
     AnnouncementsPage(),
     LiveTrackingPage(),
     FAQPage(),
