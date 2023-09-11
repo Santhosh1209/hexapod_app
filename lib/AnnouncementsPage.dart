@@ -6,8 +6,11 @@ class AnnouncementsPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Announcements'),
+        centerTitle: true, // Center the title
+        backgroundColor: Color(0xFF6535ee), // Set AppBar background color to #6535ee
       ),
       // Content for the Announcements page
     );
   }
 }
+

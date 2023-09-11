@@ -6,6 +6,8 @@ class FAQPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('FAQ'),
+        centerTitle: true, // Center the title
+        backgroundColor: Color(0xFF6535ee), // Set AppBar background color to #6535ee
       ),
       // Content for the FAQ page
     );

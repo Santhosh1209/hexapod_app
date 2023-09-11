@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'HomePage.dart';
+import 'Navigation.dart';
 
 class LoginPage extends StatelessWidget {
   @override
@@ -11,13 +11,8 @@ class LoginPage extends StatelessWidget {
       body: Center(
         child: ElevatedButton(
           onPressed: () {
-            // Replace this with your actual login logic.
-            // After successful login, navigate to the Home page.
-            Navigator.of(context).pushReplacement(
-              MaterialPageRoute(
-                builder: (context) => HomePage(),
-              ),
-            );
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => NavigationScreen()));
           },
           child: Text('Log In'),
         ),
