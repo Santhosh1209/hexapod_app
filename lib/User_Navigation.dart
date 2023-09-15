@@ -1,33 +1,38 @@
+import 'HomePage.dart';
+import 'AnnouncementsPage.dart';
 import 'package:flutter/material.dart';
-import 'HomePage.dart'; // Import the admin home page
 import 'LiveTrackingPage.dart';
-import 'Camera.dart';
-import 'SoSQueries.dart';
+import 'FAQPage.dart';
 
+void main() => runApp(const NavigationScreen());
 
-class AdminNavigationScreen extends StatelessWidget {
+class NavigationScreen extends StatelessWidget {
+  const NavigationScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: AdminNavigationState(),
+        body: NavigationState()
     );
   }
 }
 
-class AdminNavigationState extends StatefulWidget {
+class NavigationState extends StatefulWidget {
+  const NavigationState({super.key});
+
   @override
-  State<AdminNavigationState> createState() => _AdminNavigationStateState();
+  State<NavigationState> createState() => _NavigationStateState();
 }
 
-class _AdminNavigationStateState extends State<AdminNavigationState> {
+class _NavigationStateState extends State<NavigationState> {
   int currentPageIndex = 0;
 
   // create a list of pages
   final List<Widget> _pages = [
-    MyAccountPage(), // Use the admin home page for admin
+    MyAccountPage(),
+    AnnouncementsPage(),
     LiveTrackingPage(),
-    AdminCamera(), // Add the admin camera page
-    SOSQueries(), // Add the SOS queries page
+    FAQPage(),
   ];
 
   @override
@@ -47,19 +52,19 @@ class _AdminNavigationStateState extends State<AdminNavigationState> {
             label: "Home",
           ),
           NavigationDestination(
-            icon: Icon(Icons.place),
-            selectedIcon: Icon(Icons.place),
-            label: "Live Tracking",
+            icon: Icon(Icons.announcement_rounded),
+            selectedIcon: Icon(Icons.announcement),
+            label: "Announcements",
           ),
           NavigationDestination(
-            icon: Icon(Icons.camera),
-            selectedIcon: Icon(Icons.camera),
-            label: "Camera",
+              icon: Icon(Icons.place),
+              selectedIcon: Icon(Icons.place),
+              label: "Live Tracking"
           ),
           NavigationDestination(
-            icon: Icon(Icons.warning),
-            selectedIcon: Icon(Icons.warning),
-            label: "SOS Queries",
+              icon: Icon(Icons.question_mark),
+              selectedIcon: Icon(Icons.question_mark),
+              label: "FAQs"
           ),
         ],
       ),

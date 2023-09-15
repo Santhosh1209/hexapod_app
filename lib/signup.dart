@@ -26,41 +26,22 @@ class SignUpPage extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 10.0),
-              Text('Enter your details to continue'),
-              SizedBox(height: 50.0), // Increased spacing
-
-              // "Type of Account" Dropdown
-              Container(
-                width: double.infinity, // Match the width of other fields
-                padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
-                decoration: BoxDecoration(
-                  border: Border.all(color: Color(0xFF6535ee)),
-                  borderRadius: BorderRadius.circular(10.0),
-                ),
-                child: DropdownButtonFormField<String>(
-                  items: ['User', 'Admin'].map((String value) {
-                    return DropdownMenuItem<String>(
-                      value: value,
-                      child: Text(value),
-                    );
-                  }).toList(),
-                  decoration: InputDecoration.collapsed(
-                    hintText: 'Type of Account',
-                  ),
-                  onChanged: (String? value) {
-                    // Handle the selected account type here
-                  },
+              Text(
+                'Enter the following details to continue', // Add this line
+                style: TextStyle(
+                  fontSize: 14.0, // Adjust the font size
+                  color: Colors.grey, // Set text color to light grey
                 ),
               ),
-              SizedBox(height: 10.0),
+              SizedBox(height: 50.0), // Increased spacing
 
               // Text Fields Inside Bubble Containers with Spacing
               _buildBubbleTextField('Enter your Name', fieldHeight: 50.0, fontSize: 18.0),
-              SizedBox(height: 10.0),
+              SizedBox(height: 20.0),
               _buildBubbleTextField('Enter your Mail ID', fieldHeight: 50.0, fontSize: 18.0),
-              SizedBox(height: 10.0),
+              SizedBox(height: 20.0),
               _buildBubbleTextField('Enter your password', obscureText: true, fieldHeight: 50.0, fontSize: 18.0),
-              SizedBox(height: 10.0),
+              SizedBox(height: 20.0),
               _buildBubbleTextField('Confirm your password', obscureText: true, fieldHeight: 50.0, fontSize: 18.0),
               SizedBox(height: 50.0), // Increased spacing
 
@@ -70,7 +51,7 @@ class SignUpPage extends StatelessWidget {
                   // Handle registration submission here
                 },
                 style: ElevatedButton.styleFrom(
-                  primary: Color(0xFF6535ee), // Button color
+                  backgroundColor: Color(0xFF6535ee), // Button color
                   minimumSize: Size(200, 50), // Set button size
                 ),
                 child: Text('Register', style: TextStyle(fontSize: 18.0)),
@@ -81,8 +62,7 @@ class SignUpPage extends StatelessWidget {
               GestureDetector(
                 onTap: () {
                   // Handle the login action here when "Log in" is tapped
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) =>LoginPage()));
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => LoginPage()));
                 },
                 child: Text.rich(
                   TextSpan(
@@ -128,7 +108,4 @@ class SignUpPage extends StatelessWidget {
     );
   }
 }
-
-
-
 
