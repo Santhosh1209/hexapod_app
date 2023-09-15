@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'HomePage.dart'; // Import the admin home page
+import 'HomePage_Admin.dart'; // Import the admin home page
 import 'LiveTrackingPage.dart';
 import 'Camera.dart';
 import 'SoSQueries.dart';
@@ -24,7 +24,7 @@ class _AdminNavigationStateState extends State<AdminNavigationState> {
 
   // create a list of pages
   final List<Widget> _pages = [
-    MyAccountPage(), // Use the admin home page for admin
+    HomePage_Admin(), // Use the admin home page for admin
     LiveTrackingPage(),
     AdminCamera(), // Add the admin camera page
     SOSQueries(), // Add the SOS queries page
