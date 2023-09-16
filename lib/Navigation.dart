@@ -24,10 +24,10 @@ class _AdminNavigationStateState extends State<AdminNavigationState> {
 
   // create a list of pages
   final List<Widget> _pages = [
-    HomePage_Admin(), // Use the admin home page for admin
+    HomePage_Admin(),
     LiveTrackingPage(),
-    AdminCamera(), // Add the admin camera page
-    SOSQueries(), // Add the SOS queries page
+    AdminCamera(),
+    SOSQueries(),
   ];
 
   @override

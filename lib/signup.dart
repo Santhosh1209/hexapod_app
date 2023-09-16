@@ -8,9 +8,9 @@ class SignUpPage extends StatelessWidget {
       appBar: AppBar(
         title: Text('Create an Account'),
         centerTitle: true,
-        backgroundColor: Color(0xFF6535ee), // Set AppBar background color
+        backgroundColor: Color(0xFF6535ee),
       ),
-      backgroundColor: Colors.white, // Set background color to pure white
+      backgroundColor: Colors.white,
       body: Center(
         child: SingleChildScrollView(
           padding: EdgeInsets.all(20.0),
@@ -29,12 +29,11 @@ class SignUpPage extends StatelessWidget {
               Text(
                 'Enter the following details to continue', // Add this line
                 style: TextStyle(
-                  fontSize: 14.0, // Adjust the font size
-                  color: Colors.grey, // Set text color to light grey
+                  fontSize: 14.0,
+                  color: Colors.grey,
                 ),
               ),
-              SizedBox(height: 50.0), // Increased spacing
-
+              SizedBox(height: 50.0),
               // Text Fields Inside Bubble Containers with Spacing
               _buildBubbleTextField('Enter your Name', fieldHeight: 50.0, fontSize: 18.0),
               SizedBox(height: 20.0),
@@ -51,8 +50,8 @@ class SignUpPage extends StatelessWidget {
                   // Handle registration submission here
                 },
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Color(0xFF6535ee), // Button color
-                  minimumSize: Size(200, 50), // Set button size
+                  backgroundColor: Color(0xFF6535ee),
+                  minimumSize: Size(200, 50),
                 ),
                 child: Text('Register', style: TextStyle(fontSize: 18.0)),
               ),

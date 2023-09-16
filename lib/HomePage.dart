@@ -35,7 +35,7 @@ class _MyAccountPageState extends State<MyAccountPage> {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          ColoredDivider(color: dividerColor), // Line before the first tile
+          ColoredDivider(color: dividerColor),
           SizedBox(height: 30),
           CircleAvatar(
             radius: 50,
