@@ -14,7 +14,7 @@ class _AdminCameraState extends State<AdminCamera> {
     super.initState();
     // Initialize the YouTube player controller with your video URL
     _youtubePlayerController = YoutubePlayerController(
-      initialVideoId: 'YOUR_YOUTUBE_VIDEO_ID',
+      initialVideoId: 'IAX3vwjZ4m4',
       flags: YoutubePlayerFlags(
         autoPlay: true,
         mute: false,
