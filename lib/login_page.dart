@@ -18,13 +18,13 @@ class _LoginPageState extends State<LoginPage> {
         centerTitle: true,
         backgroundColor: Color(0xFF6535ee),
       ),
-      body: Center(
-        child: Padding(
-          padding: EdgeInsets.only(top: 20),
+      body: SingleChildScrollView(
+        padding: EdgeInsets.symmetric(vertical: 20, horizontal: 16),
+        child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              SizedBox(height: 20),
+              SizedBox(height: 60),
               Text(
                 'Welcome Back!',
                 style: TextStyle(
@@ -32,7 +32,7 @@ class _LoginPageState extends State<LoginPage> {
                   fontSize: 24,
                 ),
               ),
-              SizedBox(height: 8),
+              SizedBox(height: 10), // Increased spacing
               Text(
                 'Enter these details to log into your account',
                 style: TextStyle(
@@ -40,7 +40,7 @@ class _LoginPageState extends State<LoginPage> {
                   color: Colors.grey,
                 ),
               ),
-              SizedBox(height: 60),
+              SizedBox(height: 50),
               Container(
                 width: 350,
                 height: 60,
@@ -68,7 +68,7 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                 ),
               ),
-              SizedBox(height: 20),
+              SizedBox(height: 20), // Increased spacing
               Container(
                 width: 350,
                 height: 60,
@@ -85,7 +85,7 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                 ),
               ),
-              SizedBox(height: 20),
+              SizedBox(height: 20), // Increased spacing
               Container(
                 width: 350,
                 height: 60,
@@ -103,7 +103,7 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                 ),
               ),
-              SizedBox(height: 40),
+              SizedBox(height: 45),
               ElevatedButton(
                 onPressed: () {
                   if (selectedRole == 'User') {
@@ -120,7 +120,7 @@ class _LoginPageState extends State<LoginPage> {
                 },
                 style: ElevatedButton.styleFrom(
                   primary: Color(0xFF6535ee),
-                  padding: EdgeInsets.symmetric(horizontal: 36, vertical: 16), // Adjust padding for a slightly larger button
+                  padding: EdgeInsets.symmetric(horizontal: 36, vertical: 16),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(25),
                   ),
@@ -130,7 +130,7 @@ class _LoginPageState extends State<LoginPage> {
                   style: TextStyle(fontSize: 16),
                 ),
               ),
-              SizedBox(height: 10), // Add spacing between Log In button and Forgot Password button
+              SizedBox(height: 10),
               TextButton(
                 onPressed: () {
                   // Add logic for handling Forgot Password
@@ -138,46 +138,10 @@ class _LoginPageState extends State<LoginPage> {
                 child: Text(
                   'Forgot Password?',
                   style: TextStyle(
-                    color: Color(0xFF6535ee), // Text color in 6535ee color
-                    decoration: TextDecoration.underline, // Underline text
+                    color: Color(0xFF6535ee),
+                    decoration: TextDecoration.underline,
                   ),
                 ),
-              ),
-              SizedBox(height: 20), // Add spacing between buttons and social media icons
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  TextButton(
-                    onPressed: () {
-                      //
-                    },
-                    child: Image(
-                      image: AssetImage('images/google.png'),
-                      height: 40,
-                      width: 30,
-                    ),
-                  ),
-                  TextButton(
-                    onPressed: () {
-                      //
-                    },
-                    child: Image(
-                      image: AssetImage('images/facebook-app-symbol.png'),
-                      height: 40,
-                      width: 30,
-                    ),
-                  ),
-                  TextButton(
-                    onPressed: () {
-                      //
-                    },
-                    child: Image(
-                      image: AssetImage('images/twitter-sign.png'),
-                      height: 40,
-                      width: 30,
-                    ),
-                  ),
-                ],
               ),
             ],
           ),
