@@ -3,6 +3,7 @@ import 'signup.dart';
 import 'login_page.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(MyApp());
 }
 

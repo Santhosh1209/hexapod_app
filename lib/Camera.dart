@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
+import 'package:webview_flutter/webview_flutter.dart';
 
 class AdminCamera extends StatefulWidget {
   @override
@@ -16,7 +17,7 @@ class _AdminCameraState extends State<AdminCamera> {
     _youtubePlayerController = YoutubePlayerController(
       initialVideoId: 'IAX3vwjZ4m4',
       flags: YoutubePlayerFlags(
-        autoPlay: true,
+        autoPlay: false,
         mute: false,
       ),
     );
@@ -70,13 +71,18 @@ class _AdminCameraState extends State<AdminCamera> {
               ),
             ],
           ),
+          Expanded(
+            child: WebView(
+              initialUrl: 'https://sandcastle.cesium.com/?src=Clamp%20to%203D%20Tiles.html', // Replace with the actual file path or URL of your CesiumJS scene
+              javascriptMode: JavascriptMode.unrestricted,
+            ),
+          ),
           // Rest of the camera content
         ],
       ),
     );
   }
 
-  @override
   void dispose() {
     _youtubePlayerController.dispose(); // Dispose of the YouTube player controller
     super.dispose();

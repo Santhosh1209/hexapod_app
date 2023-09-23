@@ -23,8 +23,8 @@ class LiveTrackingPage extends StatefulWidget {
 class _LiveTrackingPageState extends State<LiveTrackingPage> {
   List<Marker> markers = []; // List of markers for hexapod locations
   String selectedGas = 'Nitrogen'; // Selected gas for pie chart
-  double latitude = 13.0827; // Initial latitude
-  double longitude = 80.2707; // Initial longitude
+  double latitude = 12.9901; // Initial latitude
+  double longitude = 79.9707; // Initial longitude
   bool showExternalData = false;
 
   @override
